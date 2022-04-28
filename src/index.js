@@ -1,9 +1,8 @@
-import react, { useEffect, useRef,useState } from "react";
+import react, { useEffect, useRef, useState, memo } from "react";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Block from './components/Block/Block'
 import reportWebVitals from './reportWebVitals';
 
 
@@ -13,21 +12,21 @@ import reportWebVitals from './reportWebVitals';
 
 //   useEffect(() => {
 //     document.title = `Вы нажали ${count} раз`;
-//     console.log(`Вы нажали ${count} раз`);
+//      //console.log(`Вы нажали ${count} раз`);
 //   });
 
 //   useEffect(()=>{
 
-//     console.log(`Вы нажали ${sliderCounter} раз`);
+//      //console.log(`Вы нажали ${sliderCounter} раз`);
 //     document.title = `Вы нажали ${sliderCounter} раз`;
 //   },[])
 
 //   function changeCount() {
 //     setSliderCounter(sliderCounter + 1)
-//     console.log(sliderCounter)
+//      //console.log(sliderCounter)
 
     // setCount(count + 1)
-    // console.log(count)
+    //  //console.log(count)
     
     // document.title = `Вы нажали ${count} раз`;
     // document.title = `Вы нажали ${sliderCounter} раз`;
@@ -88,7 +87,7 @@ import reportWebVitals from './reportWebVitals';
 // );
 
 // If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
+// to log results (for example: reportWebVitals( //console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
 // function Square() {
@@ -106,18 +105,18 @@ import reportWebVitals from './reportWebVitals';
 //     // element.current.style.backgroundColor = color;
 //     // element.current.onclick = changeColor;
 //     element.current.style.backgroundColor = color;
-//     console.log(element.current)
+//      //console.log(element.current)
 //     // setCount(count +1);
 //   })
 
 
 
 //   function changeColor() {
-//     console.log(element.current)
-//     console.log(document.getElementById('square'));
+//      //console.log(element.current)
+//      //console.log(document.getElementById('square'));
 //     setColor('blue');
 //     setCount(count + 1);
-//     console.log(`count = ${count}`);
+//      //console.log(`count = ${count}`);
 //     element.current.style.backgroundColor = color;
     
 
@@ -126,7 +125,7 @@ import reportWebVitals from './reportWebVitals';
 //   // setColor('lightBlue');
 //   // setColor('grey');
 
-//   console.log('гыыыыгы')
+//    //console.log('гыыыыгы')
 //   // element.current.style.backgroundColor = color;
 
 //   return(
@@ -147,54 +146,61 @@ import reportWebVitals from './reportWebVitals';
 //   })
      
 
-//   console.log('count', count);
+//    //console.log('count', count);
 // }
 
 
-function P() {
-  // constructor() {
-  //     this.output = this.output.bind(this)
-  //     this.state = {
-  //         count: 0
-  //     }
-  // }
-  // const [count, setCount] = useState()
+function P(props) {
 
-  const title = useRef();
 
-let count = 10;
-  function output(a) {
-    count = a;
-    console.log(count);
-    title.current.style.fontSize = `${Math.round(count)}px`;
-  }
+  const [count, setCount] = useState(0)
 
+  console.log('P RENDERED')
   return (
-      <div>
-          <h1 ref = {title} style = {{fontSize: `${Math.round(count)}px`}}>Count: {count}</h1>
-          <C func={output} />
+      <div onClick={()=>{setCount(count+1)}}>
+          <h1 style = {{fontSize: `${Math.round()}px`}}>Count: </h1>
+          <C count = {count} />
       </div>
   )
 }
 function C(props) {
-    return (
-        <div>
-            C component
-            <button onClick={(evt) => props.func(Math.random()*50)}>Send To Parent</button>
-        </div>
-    )
+  // console.log('C RENDERED')
+
+  // const childCount = useRef(0);
+
+  let childCount = 0;
+  useEffect(()=>{
+  console.log('count = ' + props.count)
+  console.log('childCount = ' + childCount)
+  })
+
+  return (
+      <div>
+          C component
+          <button onClick={(evt) => {childCount++}}>Send To Parent</button>
+      </div>
+  )
 }
+// //console.log(React.memo);
+// //console.log(C)
+C = React.memo(C);
 
 
-
+function Component() {
+  console.log('Component RENDERED')
+  return(
+    <div>Lololol</div>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <P/> */}
     <App/>
-  {/* <Example/> */}
-  {/* <Square/> */}
-  {/* <ChangeState/> */}
+    {/* <Component/> */}
+    {/* <P/> */}
+    {/* <Example/> */}
+    {/* <Square/> */}
+    {/* <ChangeState/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
