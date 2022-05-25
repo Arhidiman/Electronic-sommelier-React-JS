@@ -1,0 +1,31 @@
+.double-button {
+	display: flex;
+    background-color: #E9E9E9;
+    border: solid #E9E9E9 2px;
+    border-radius: 15px;
+
+}
+
+.clean-button {
+	display: block;
+    margin: 0;
+    padding: 5px 35px 5px 25px;
+    background-color: #B7B7B7;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+
+.save-button {
+    display: block;
+    margin: 0;
+    padding: 5px 25px 5px 35px;
+    background-color: #03DA5F;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#footer {
+	display: flex;
+    justify-content: space-around;
+}

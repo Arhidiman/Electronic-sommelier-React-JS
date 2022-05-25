@@ -1,0 +1,113 @@
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+   
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+
+    li,p {
+        font-size: 12px;
+    }
+
+    .app-container > #bottom-section {
+        margin-top: -35px;
+    }
+
+    #middle-section > .properties {
+        row-gap: 0;
+    }
+
+    section > .block, .properties > .block  {
+        width: 180px;
+    }
+
+    section > .wide-block {
+        width: 400px;
+    }
+
+    .block > .block-body {
+        height: 250px
+    }
+
+    .short-block > .block-body {
+        height: 85px
+    }
+
+    .properties > .short-block-list > .block-body {
+        height: 85px
+    }
+
+
+    .block > .block-header {
+        height: 35px;
+    }
+
+    .block-slider-body > .slider-container {
+        width: 115px;
+        height: 230px;
+    }
+
+    .named-glass > .glass-image {
+        width: 115px;
+    }
+
+    .scale-values > .value {
+        font-size: 11px;
+    }
+
+    .input-description > .tab {
+        font-size: 12px;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .app-container > #top-section {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        row-gap: 40px;
+
+    }
+
+    .app-container > #middle-section{
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+    }
+
+    .app-container > #bottom-section {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0px;
+        row-gap: 40px;
+    }
+
+    #bottom-section > .block:nth-child(1) {
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 1;
+       grid-column-end: 2;
+    }
+
+    #bottom-section > .block:nth-child(2) {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        justify-self: end;
+     }
+
+     #bottom-section > .block:nth-child(3) {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+     }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+
+}

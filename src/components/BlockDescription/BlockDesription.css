@@ -1,0 +1,114 @@
+
+.block-description {
+	width: 540px;
+	text-align: left;
+	}
+
+
+.block-description-header {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+    width: 100%;
+    height: 45px;
+    background-color: #538BFF;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.block-description-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 350px;
+    background-color: #E5E5E5;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+
+.description-container {
+    height: 95%;
+    width: 85%;
+	display: flex;
+    position: relative;
+}
+
+.description-content {
+	height: 230px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	position: absolute;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.description-container > form {
+	margin-top: 10px;
+	display: block;
+}
+
+input {
+	box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 3px;
+    padding-left: 10px;
+    background: linear-gradient(to bottom, #E4E4E4, #FFF);
+    border-radius: 3px;
+    vertical-align: text-top;
+}
+
+
+.input-description {
+	width: 100%;
+    height: 55%;
+}
+
+.tab {
+	display: inline-block;
+    height: 35px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #E5E5E5;
+    color: #5E5E5E;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab-selected {
+	background-color: #fff;
+    color: #4B74AF;
+    cursor: pointer;
+}
+
+.instruction{
+	position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 0px;
+    top: 113px;
+    border-radius: 3px;
+}
+
+.input {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 3px;
+    padding-left: 10px;
+    background: linear-gradient(to bottom, #E4E4E4, #FFF);
+    border-radius: 3px;
+    vertical-align: text-top;
+}
+
+
+
+

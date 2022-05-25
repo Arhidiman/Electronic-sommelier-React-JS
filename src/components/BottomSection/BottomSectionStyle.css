@@ -1,0 +1,7 @@
+
+#bottom-section {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    column-gap: 40px;
+}

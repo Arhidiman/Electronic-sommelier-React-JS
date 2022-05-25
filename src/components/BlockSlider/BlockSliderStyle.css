@@ -1,6 +1,5 @@
 .block-slider {
-width: 180px;
-margin: 20px;
+width: 250px;
 }
 
 .block-slider-header {
@@ -9,7 +8,7 @@ margin: 20px;
     justify-content: space-between;
     padding: 0px 15px 0px 15px;
     width: 100%;
-    height: 35px;
+    height: 45px;
     background-color: #538BFF;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -21,7 +20,7 @@ margin: 20px;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 250px;
+    height: 350px;
     background-color: #E5E5E5;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -46,15 +45,15 @@ margin: 20px;
 
 
 .slider-container {
-	width: 115px;
-	height: 230px;
+	width: 150px;
+	height: 300px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
 }
 
 .slider-content {
-	height: 230px;
+	height: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-grow: 1;
@@ -66,8 +65,25 @@ margin: 20px;
     /* transform:translateX(180px) */
 }
 
+.named-glass {
+    height: 100%;
+}
+
+
+.glass-image {
+    width: 150px;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: none;
+}
+
+
 .glass-name {
+    margin-top: 10px;
+    text-align: center;
     font-weight: bold;
     color:#8B8C8D;
+  
 }
 

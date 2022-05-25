@@ -1,30 +1,29 @@
 
-.block-list {
-width: 180px;
-margin: 20px;
+.block-ingredients {
+width: 540px;
 text-align: left;
 }
 
 
-.block-list-header {
+.block-ingredients-header {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     padding: 0px 15px 0px 15px;
     width: 100%;
-    height: 35px;
+    height: 45px;
     background-color: #538BFF;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 
-.block-body-list {
+.block-ingredients-body {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     width: 100%;
-    height: 250px;
+    height: 350px;
     background-color: #E5E5E5;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -33,21 +32,22 @@ text-align: left;
 
 
 
-.scroll-container::-webkit-scrollbar {
-	display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .scroll-container {
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;  /* Firefox */
-  }
-
-.scroll-container {
-	width: 110%;
+.ingredients-container {
+	width: 90%;
 	height: 230px;
-	display: flex;
+	display: block;
 	position: relative;
 	overflow: hidden;
+}
+
+.ingredients-content {
+	height: 230px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	position: absolute;
+	overflow: hidden;
+	pointer-events: none;
 }
 
 ul{
@@ -61,28 +61,33 @@ li {
 	box-sizing:border-box;
 	padding: 5px 0px 5px 15px;
 	text-align: left;
-	font-size: 13px;
 	list-style-type: none;
 	color: #8B8C8D;
 }
-
-.inactive {
-	background: '';
-	color: #C4C4C4;
-}
-
-.active {
-	background: '';
-	color: #8B8C8D;
+select {
+	padding-left: 20px;
+	position: relative;
+	background: none;
+	border: none;
+	outline: none;
+	appearance : none;
+	color: grey;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #8B8C8D;	
 	cursor: pointer;
 }
 
-.selected {
-	background: linear-gradient(to right, #CBCBCB, #E5E5E5);
+.ingredient {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	border-bottom: solid #8B8C8D 1px;
 	color: #4B74AF;
+	font-weight: bold;
 	cursor: pointer;
 }
-
 
 
 

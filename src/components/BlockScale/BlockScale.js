@@ -47,12 +47,12 @@ function BlockScale(props) {
     })
 
     return(
-        <div className = 'block-scale'>
-        <div className = {'block-scale-header'}>
+        <div className = 'block-scale short-block block'>
+        <div className = {'block-scale-header block-header'}>
             <h2 className = 'block-title'> {props.title} </h2>
             <p className = 'block-subtitle' > {props.subtitle} </p>
         </div>
-        <div ref={block} className = {'block-scale-body'} style={{position:"relative"}}>
+        <div ref={block} className = {'block-scale-body block-body'} style={{position:"relative"}}>
         
                 
             <div className = {'top-block-scale-body'}>

@@ -1,18 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import Title from './components/Title'
-import Background from './components/Background'
-function App() {
-  
+import './Adaptive.css'
+import Header from './components/Header/Header'
+import TopSection from './components/TopSection/TopSection'
+import MiddleSection from './components/MiddleSeciton/MiddleSection'
+import BottomSection from './components/BottomSection/BottomSection'
+import Footer from './components/Footer/Footer'
+
+function App(props) {
   return (
-    <div className="App">
-      <Background
-          height={'1200px'}
-          name = 'фон'
-          width='900px'
-          backgroundColor={'#041E3E'}
-      />
-    </div>
+    
+    <form id = 'app' >
+      <div className='app-container'>
+        <Header/>
+        <TopSection/>
+        <MiddleSection/>
+        <BottomSection/>
+        <Footer/>
+      </div>
+    </form>
   );
 }
 
